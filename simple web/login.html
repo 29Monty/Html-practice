@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="Roll.css" />
+    <style>
+      :root {
+        --bg: #f4f6f8;
+        --card: #ffffff;
+        --primary: #1b63d1;
+        --accent: #1b63d1;
+        --muted: #6b7280;
+        --radius: 12px;
+        --shadow: 0 10px 30px rgba(2, 6, 23, 0.07);
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        font-family:
+          Inter,
+          Segoe UI,
+          Roboto,
+          Arial,
+          Helvetica,
+          sans-serif;
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px;
+        color: #0f1724;
+      }
+      .login-card {
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        width: 420px;
+        max-width: 100%;
+        padding: 32px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .brand .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--primary), #35a02b);
+      }
+      
+     .form-group {
+        margin-bottom: 14px;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.9rem;
+        color: #0b1720;
+        font-weight: 600;
+      }
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #e6e9ee;
+        border-radius: 8px;
+        background: #fbfcfd;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+      input:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(31, 122, 37, 0.06);
+        border-color: var(--primary);
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .remember {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .actions {
+        margin-top: 18px;
+      }
+      /* Button system */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        border: 0;
+        height: 44px;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+        width: 100%;
+        font-size: 1rem;
+      }
+      .btn-primary:hover {
+        opacity: 0.97;
+      }
+      .btn-secondary {
+        background: #fff;
+        color: var(--accent);
+        border: 1px solid rgba(27, 99, 209, 0.12);
+        padding: 8px 14px;
+        font-weight: 600;
+        border-radius: 8px;
+      }
+      .btn.small {
+        min-width: 140px;
+      }
+      .meta {
+        margin-top: 14px;
+        text-align: center;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .meta a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      @media (max-width: 460px) {
+        .login-card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="login-card" role="main" aria-labelledby="loginTitle">
+      <h2 id="loginTitle">Sign in to your account</h2>
+
+      <form action="activity.html" method="post" novalidate>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+            minlength="6"
+            autocomplete="current-password"
+          />
+        </div>
+
+        <div class="form-group row">
+          <label class="remember"
+            ><input type="checkbox" id="remember" name="remember" /> Remember
+            me</label
+          >
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Sign In</button>
+          <div style="margin-top: 10px; text-align: center">
+            <a
+              href="signup.html"
+              style="
+                font-weight: 600;
+                color: var(--accent);
+                text-decoration: none;
+              "
+              >Create an account</a
+            >
+          </div>
+        </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
